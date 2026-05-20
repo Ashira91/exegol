@@ -1,0 +1,30 @@
+general:
+  output_dir: "reports"
+  log_dir: "logs"
+  log_level: "INFO"
+  log_rotation_mb: 5
+  log_backup_count: 3
+
+recon:
+  timeout: 5
+  subdomains:
+    - www
+    - mail
+    - ftp
+    - ssh
+    - vpn
+    - api
+    - dev
+    - staging
+    - admin
+    - ns1
+    - ns2
+
+scan:
+  timeout: 2
+  rate_limit: 100
+  default_ports: [21, 22, 23, 25, 53, 80, 110, 143, 443, 445, 3306, 5432, 8080, 8443]
+
+report:
+  format: "txt"
+  archive: true
